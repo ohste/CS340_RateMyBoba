@@ -8,8 +8,8 @@ Customers can rate drinks within shops by giving comments and a number of stars
 
 # Done
 
-##Developers:
-Aeijan Bajracharya
-Stephen Oh
-Yingshi Huang
-Xiaoqin Bai
+## Developers:
+<br>Aeijan Bajracharya
+<br>Stephen Oh
+<br>Yingshi Huang
+<br>Xiaoqin Bai
