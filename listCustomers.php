@@ -1,3 +1,4 @@
+
 ﻿<!DOCTYPE html>
 <?php
 		$currentpage="List Customers";
@@ -65,3 +66,4 @@ $query = "SELECT * FROM `Customers` ";
 </body>
 
 </html>
+
