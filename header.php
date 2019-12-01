@@ -1,12 +1,18 @@
-<?php		
+ <?php		
 	$user = $_GET['user'];
 	//$content holds a 2D array with keys being menu names and values being an array with a subtitle, and content
 	$content = array(
-		"Add Supplier" => "addSupplier.php",
-		"List Suppliers" => "listSuppliers.php");
+		"Add Shop" => "addShop.php",
+		"Add Drink" => "addDrink.php",
+		"Add Customer" => "addCustomer.php",
+		"Add Manager" => "addManager.php",
+		"List Shops" => "listShops.php",
+		"List Drinks" => "listDrinks.php",
+		"List Customers" => "listCustomers.php",
+		"List Managers" => "listManagers.php");
 ?>
 <header> 
-	Aeijan Bajracharya - <em>Welcome <span id="username"><?php echo $user;?></span>!</em>
+	My Site - <em>Welcome <span id="username"><?php echo $user;?></span>!</em>
 </header>
 <nav>
 	<ul>
