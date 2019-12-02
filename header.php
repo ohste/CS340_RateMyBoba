@@ -10,7 +10,8 @@
 		"List Drinks" => "list_drinks.php",
 		"List Customers" => "listCustomers.php",
 		"List Managers" => "listManagers.php",                  
-		"Add Ratings" => "addRating.php");
+		"Add Ratings" => "addRating.php",
+		"Ratings by Customer" => "listRatingsByCustomer.php");
 ?>
 <header> 
 	BobaShopReview - <em>Welcome <span id="username"><?php echo $user;?></span>!</em>
