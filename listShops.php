@@ -13,16 +13,16 @@
 
 <?php
 // change the value of $dbuser and $dbpass to your username and password
-	include 'connectvars.php'; 
 	include 'header.php';	
 
+	include 'connectvars.php'; 
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
 		die('Could not connect: ' . mysql_error());
 	}	
 
 // query to select all information from supplier table
-	$query = "SELECT * FROM Shops ";
+	$query = "SELECT * FROM `a.Shop` ";
 	
 // Get results from query
 	$result = mysqli_query($conn, $query);
