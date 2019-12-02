@@ -22,7 +22,7 @@
 	}	
 
 // query to select all information from supplier table
-	$query = "SELECT * FROM `a.Shop` ";
+	$query = "SELECT * FROM `Shop` ";
 	
 // Get results from query
 	$result = mysqli_query($conn, $query);
@@ -32,6 +32,7 @@
 
 	if(mysqli_num_rows($result) > 0){
         echo "<h1>Shops</h1>";  
+		echo"<h3>Click a shop to see their information</h3>";
 		echo "<table id='t01' border='1'>";
         echo "<thead>";
 			echo "<tr>";
