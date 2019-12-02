@@ -22,7 +22,7 @@
 	}	
 
 // query to select all information from supplier table
-	$query = "SELECT * FROM `List Shops` ";
+	$query = "SELECT * FROM `a.listShops` ";
 	
 // Get results from query
 	$result = mysqli_query($conn, $query);
