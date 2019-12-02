@@ -26,8 +26,8 @@
 			FROM `Rating`, `Customers`, `Drink`, `Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
-			AND Rating.ShopID = Shop.ShopID";
-
+			AND Rating.ShopID = Shop.ShopID
+			AND Rating.CustomerID = $customer";
 	// Get results from query
 		$result = mysqli_query($conn, $query);
 		if (!$result) {
