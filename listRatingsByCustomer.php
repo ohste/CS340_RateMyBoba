@@ -23,7 +23,7 @@
 
 	// query to select all information from parts table
 		$query = "SELECT Shop.ShopID, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name
-			FROM `Rating`, `Customers`, `Drink`, `Shop`
+			FROM `a.Rating`, `a.Customers`, `a.Drink`, `a.Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
 			AND Rating.ShopID = Shop.ShopID
