@@ -6,7 +6,7 @@ header {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	padding: 20px 20px 20px 20px;
-	font-size: 1.5em;
+	font-size: 20px;
 
 }
 header > h1 {
@@ -19,27 +19,46 @@ header > img {
     float: left;
     margin: 0 0 10px 10px;
 }
-
+header > ul {
+	padding-left: 0pt;
+}
 /* header em {
 	font-size: 0.75em;
 	float: right;
 } */
+a#home:visited,
+a#home:link{
+	color: white;
+	text-decoration: none;
+}
+a#home:hover{
+	color:#c2c2d6;
+	font-size: 22px;
+}
 #bardiv{
 	width: 20%;
 	float: right;
+	text-align: right;
 }
-
+div#main{
+	width: 180px;
+	text-align: center;
+	margin:2px 2px 2px 2px;
+	float:left;
+}
 html {
 	background-color: light gray;
 	font-family: Helvetica;
 	font-size: 18px;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-	margin: 0 0 0 0;
+		margin: 0 0 0 0;
+		float:
 }
 
 nav li {

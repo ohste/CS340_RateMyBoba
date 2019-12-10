@@ -6,16 +6,20 @@
 		// "Add Drink" => "add_drinks.php",
 		// "Add Customer" => "addCustomer.php",
 		// "Add Manager" => "addManager.php",
-		"List Shops" => "listShops.php",
 		// "List Drinks" => "list_drinks.php",
 		"List Customers" => "listCustomers.php",
+    "List Shops" => "listShops.php",
 		// "List Managers" => "listManagers.php",
 		// "Add Ratings" => "addRating.php",
-    "Home" => "home.php");
+    "Home" => "homepage.php");
 
 ?>
 <header>
-	<a href="home.php">RATE MY BOBA </a> <div id="bardiv">Welcome <span id="username"><?php echo $user;?></span>!</div>
+	<div>
+    <div id = "main"><a href="home.php" id = "home">RATE MY BOBA </a></div>
+    <div id="bardiv"><em>Welcome <span id="username"><?php echo $user;?></span>!</em>
+    </div>
+  </div>
 </header>
 <nav>
 	<ul>
