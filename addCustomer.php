@@ -7,13 +7,22 @@
 	<head>
 		<title>Add Customer</title>
 		<link rel="stylesheet" href="index.css">
-		<script type = "text/javascript"  src = "verifyInput.js" > </script>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("Password");
+			  if (x.type === "text") {
+			    x.type = "password";
+			  } else {
+			    x.type = "text";
+			  }
+			}
+		</script>
 	</head>
 <body>
 
 <?php
 	include "header.php";
-	$msg = "Add new drink record to the Drink Table";
+	$msg = "Add new customer to the Customer Table";
 
 // change the value of $dbuser and $dbpass to your username and password
 	include 'connectvars.php';
@@ -25,22 +34,21 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Escape user inputs for security
-		$DrinkID = mysqli_real_escape_string($conn, $_POST['DrinkID']);
-		$Flavor = mysqli_real_escape_string($conn, $_POST['Flavor']);
-		$Temperature = mysqli_real_escape_string($conn, $_POST['Temperature']);
-		$Price = mysqli_real_escape_string($conn, $_POST['Price']);
-		$ShopID = mysqli_real_escape_string($conn, $_POST['ShopID']);
-
+		$CustomerID = rand(100, 999);
+		$Name = mysqli_real_escape_string($conn, $_POST['Name']);
+		$Email = mysqli_real_escape_string($conn, $_POST['Email']);
+		$Password = mysqli_real_escape_string($conn, $_POST['Password']);
+		
 
 // See if sid is already in the table
-		$queryIn = "SELECT * FROM `a.Drink` where DrinkID='$DrinkID' ";
+		$queryIn = "SELECT * FROM Customers where CustomerID='$CustomerID' ";
 		$resultIn = mysqli_query($conn, $queryIn);
 		if (mysqli_num_rows($resultIn)> 0) {
-			$msg ="<h2>Can't Add to Table</h2> There is already a supplier with DrinkID $DrinkID<p>";
+			$msg ="<h2>Can't Add to Table</h2> There is already a customer with CustomerID $CustomerID<p>";
 		} else {
 
 		// attempt insert query
-			$query = "INSERT INTO `a.Drink` (DrinkID, Flavor, Temperature, Price, ShopID) VALUES ('$DrinkID', '$Flavor', '$Temperature', '$Price', '$ShopID')";
+			$query = "INSERT INTO Customers (CustomerID, Name, Email, Password) VALUES ('$CustomerID', '$Name', '$Email', '$Password')";
 			if(mysqli_query($conn, $query)){
 				$msg =  "Record added successfully.<p>";
 			} else{
@@ -57,27 +65,25 @@ mysqli_close($conn);
 
 	<form method="post" id="addForm">
 	<fieldset>
-		<legend>Drink Info:</legend>
+		<legend>Add a customer:</legend>
+		<!-- <p>
+			<label for="CustomerID">Customer:</label>
+			<input type="number" min=1 max = 99999 class="required" name="CustomerID" id="CustomerID" title="CustomerID should be numeric">
+		</p> -->
 		<p>
-			<label for="DrinkID">Drink ID:</label>
-			<input type="number" min=1 max = 99999 class="required" name="DrinkID" id="DrinkID" title="DrinkID should be numeric">
+			<label for="Name">First Name:</label>
+			<input type="text" class="required" name="Name" id="Name">
 		</p>
 		<p>
-			<label for="Flavor">Drink Flavor:</label>
-			<input type="text" class="required" name="Flavor" id="Flavor">
+			<label for="Email">Email:</label>
+			<input type="text" class="required" name="Email" id="Email">
 		</p>
 		<p>
-			<label for="Temperature">Drink Temperature:</label>
-			<input type="text" class="required" name="Temperature" id="Temperature">
+			<label for="Password">Password:</label>
+			<input type="password" class="required" name="Password" id="Password">
       	<p>
-		<p>
-			<label for="Price">Drink Price:</label>
-			<input type="number" min=1 max = 99999 class="required" name="Price" id="Price" title="Price should have a decimal">
-		</p>
-		<p>
-			<label for="Price">Shop ID:</label>
-			<input type="number" min=1 max = 99999 class="required" name="ShopID" id="ShopID" title="ShopID should have a decimal">
-		</p>
+		<input type="checkbox" onclick="myFunction()">Show Password
+
 	</fieldset>
 
 
