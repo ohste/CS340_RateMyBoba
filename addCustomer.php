@@ -34,7 +34,7 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Escape user inputs for security
-		$CustomerID = mysqli_real_escape_string($conn, $_POST['CustomerID']);
+		$CustomerID = rand(100, 999);
 		$Name = mysqli_real_escape_string($conn, $_POST['Name']);
 		$Email = mysqli_real_escape_string($conn, $_POST['Email']);
 		$Password = mysqli_real_escape_string($conn, $_POST['Password']);
@@ -66,10 +66,10 @@ mysqli_close($conn);
 	<form method="post" id="addForm">
 	<fieldset>
 		<legend>Add a customer:</legend>
-		<p>
+		<!-- <p>
 			<label for="CustomerID">Customer:</label>
 			<input type="number" min=1 max = 99999 class="required" name="CustomerID" id="CustomerID" title="CustomerID should be numeric">
-		</p>
+		</p> -->
 		<p>
 			<label for="Name">First Name:</label>
 			<input type="text" class="required" name="Name" id="Name">
