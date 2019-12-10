@@ -7,7 +7,16 @@
 	<head>
 		<title>Add Manager</title>
 		<link rel="stylesheet" href="index.css">
-		<script type = "text/javascript"  src = "verifyInput.js" > </script> 
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("Password");
+			  if (x.type === "text") {
+				x.type = "password";
+			  } else {
+				x.type = "text";
+			  }
+			}
+		</script> 
 	</head>
 <body>
 
@@ -26,7 +35,7 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Escape user inputs for security
-		$managerID = mysqli_real_escape_string($conn, $_POST['managerID']);
+		$managerID = rand(100,999);
 		$Name = mysqli_real_escape_string($conn, $_POST['Name']);
 		$Email = mysqli_real_escape_string($conn, $_POST['Email']);
 		
@@ -64,18 +73,23 @@ mysqli_close($conn);
 	<form method="post" id="addForm">
 	<fieldset>
 		<legend>Shop Info:</legend>
-		<p>
+		<!-- <p>
 			<label for="managerID">Manager ID:</label>
 			<input type="number" min=1 max = 99999 class="required" name="managerID" id="managerID" title="managerID should be numeric">
-		</p>
+		</p> -->
 		<p>
 			<label for="Name">Name:</label>
 			<input type="text" class="required" name="Name" id="Name">
 		</p>
-			<p>
+		<p>
 			<label for="Email">Email:</label>
 			<input type="text" class="required" name="Email" id="Email">
 		</p>
+		<p>
+			<label for="Password">Password:</label>
+			<input type="password" class="required" name="Password" id="Password">
+		<p>
+		<input type="checkbox" onclick="myFunction()">Show Password
 		
 	</fieldset>
 
