@@ -71,7 +71,7 @@ mysqli_close($conn);
 			<input type="number" min=1 max = 99999 class="required" name="CustomerID" id="CustomerID" title="CustomerID should be numeric">
 		</p> -->
 		<p>
-			<label for="Name">First Name:</label>
+			<label for="Name">Name:</label>
 			<input type="text" class="required" name="Name" id="Name">
 		</p>
 		<p>
