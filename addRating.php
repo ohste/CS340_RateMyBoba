@@ -30,14 +30,14 @@
 		$Comment = mysqli_real_escape_string($conn, $_POST['Comment']);
 		$NumStars = mysqli_real_escape_string($conn, $_POST['NumStars']);
 		
-		$queryIn = "SELECT * FROM `a.Rating` where RatingID='$RatingID' ";
+		$queryIn = "SELECT * FROM `Rating` where RatingID='$RatingID' ";
 		$resultIn = mysqli_query($conn, $queryIn);
 		if (mysqli_num_rows($resultIn)> 0) {
 			$msg ="<h2>Can't Add Ratings to Table</h2> There is already a same Rating ID $RatingID<p>";
 		} 
 		else {
 			
-			$query = "INSERT INTO `a.Rating` (RatingID, DrinkID, ShopID, CustomerID, Comment, NumStars) VALUES ('$RatingID', '$DrinkID', '$ShopID', '$CustomerID', '$Comment', '$NumStars')";		
+			$query = "INSERT INTO `Rating` (RatingID, DrinkID, ShopID, CustomerID, Comment, NumStars) VALUES ('$RatingID', '$DrinkID', '$ShopID', '$CustomerID', '$Comment', '$NumStars')";		
 			if(mysqli_query($conn, $query)){
 				$msg =  "Rating added successfully.<p>";
 			} 

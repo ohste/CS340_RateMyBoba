@@ -12,6 +12,7 @@
 		// "List Managers" => "listManagers.php",
 		// "Add Ratings" => "addRating.php",
     "Home" => "home.php");
+
 ?>
 <header>
 	<a href="home.php">RATE MY BOBA </a> <div id="bardiv">Welcome <span id="username"><?php echo $user;?></span>!</div>

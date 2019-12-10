@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <?php
-		$currentpage="Ratings by Customer";
-    $customer = $_GET['cust'];
+		$currentpage="Show Shops";
+    $customer = $_GET['Shops'];
 ?>
 <html>
 	<head>
-		<title>List Parts</title>
+		<title>Show shops/title>
 		<link rel="stylesheet" href="index.css">
 	</head>
 <body>
@@ -22,12 +23,10 @@
 		}
 
 	// query to select all information from parts table
-		$query = "SELECT Shop.ShopID, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name
-			FROM `Rating`, `Customers`, `Drink`, `Shop`
-			WHERE Rating.CustomerID = Customers.CustomerID
-			AND Rating.DrinkID = Drink.DrinkID
-			AND Rating.ShopID = Shop.ShopID
-			AND Rating.CustomerID = $customer";
+		$query = "SELECT Shop.Address, Manager.Name,Manager.Email, Drink.Flavor
+			FROM `Manager`, `Drink`, `Shop`
+			WHERE Shop.managerID = Manager.managerID
+			AND Drink.shopID = Shop.ShopID";
 
 	// Get results from query
 		$result = mysqli_query($conn, $query);
@@ -43,10 +42,9 @@
 			// Create the table header
 	        echo "<thead>";
 				echo "<tr>";
-				echo "<th>Shop</th>";
+				echo "<th>Address</th>";
+				echo "<th>Name</th>";
 				echo "<th>Drink</th>";
-				echo "<th>Comment</th>";
-				echo "<th>Rating(1-5)</th>";
 				echo "</tr>";
 	        echo "</thead>";
 	        echo "<tbody>";
@@ -55,10 +53,10 @@
 			mysqli_data_seek($result, 0);
 	        while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
-						echo "<td>" . $row['ShopID'] . "</td>";
-						echo "<td>" . $row['Flavor'] . "</td>";
-						echo "<td>" . $row['Comment'] . "</td>";
-						echo "<td>" . $row['NumStars'] . "</td>";
+						echo "<td>" . $row['Address'] . "</td>";
+						echo "<td>" . $row['Name'] . "</td>";
+						echo "<td>" . $row['Drink'] . "</td>";
+						//echo "<td>" . $row['NumStars'] . "</td>";
 						echo "</tr>";
 	        }
 	        echo "</tbody>";
