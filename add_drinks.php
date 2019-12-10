@@ -25,7 +25,7 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Escape user inputs for security
-		$DrinkID = mysqli_real_escape_string($conn, $_POST['DrinkID']);
+		$DrinkID = rand(100,999);
 		$Flavor = mysqli_real_escape_string($conn, $_POST['Flavor']);
 		$Temperature = mysqli_real_escape_string($conn, $_POST['Temperature']);
 		$Price = mysqli_real_escape_string($conn, $_POST['Price']);
@@ -33,14 +33,14 @@
 
 	
 // See if sid is already in the table
-		$queryIn = "SELECT * FROM `a.Drink` where DrinkID='$DrinkID' ";
+		$queryIn = "SELECT * FROM `Drink` where DrinkID='$DrinkID' ";
 		$resultIn = mysqli_query($conn, $queryIn);
 		if (mysqli_num_rows($resultIn)> 0) {
 			$msg ="<h2>Can't Add to Table</h2> There is already a supplier with DrinkID $DrinkID<p>";
 		} else {
 		
 		// attempt insert query 
-			$query = "INSERT INTO `a.Drink` (DrinkID, Flavor, Temperature, Price, ShopID) VALUES ('$DrinkID', '$Flavor', '$Temperature', '$Price', '$ShopID')";
+			$query = "INSERT INTO `Drink` (DrinkID, Flavor, Temperature, Price, ShopID) VALUES ('$DrinkID', '$Flavor', '$Temperature', '$Price', '$ShopID')";
 			if(mysqli_query($conn, $query)){
 				$msg =  "Record added successfully.<p>";
 			} else{
@@ -58,10 +58,6 @@ mysqli_close($conn);
 	<form method="post" id="addForm">
 	<fieldset>
 		<legend>Drink Info:</legend>
-		<p>
-			<label for="DrinkID">Drink ID:</label>
-			<input type="number" min=1 max = 99999 class="required" name="DrinkID" id="DrinkID" title="DrinkID should be numeric">
-		</p>
 		<p>
 			<label for="Flavor">Drink Flavor:</label>
 			<input type="text" class="required" name="Flavor" id="Flavor">
