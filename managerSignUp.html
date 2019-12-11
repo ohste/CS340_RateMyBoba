@@ -1,10 +1,8 @@
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Manager Login Page</title>
+  <title>Manager Sign Up Page</title>
   <!-- <link rel="stylesheet" href="managerLogin.css"> -->
   <!-- <script type="text/javascript"></script>
  -->
@@ -62,25 +60,76 @@ ul.list li:nth-child(5){
     box-shadow: inset 0 3px 5px 0 rgba(0,0,0, 0.2);
     outline: 0;
 
- </style>>
+ </style>
 
 </head>
   <body>
+    <form action ="addDrink.php" method="get">
  
-    <div class="form-container">
-      <ul class="list">
-        <li>Manager Login</li>
-        <li><input type="text" name="Manager Name" placeholder="Manager Name"></li>
+    <div class="form-container" >
+      <ul class="list" >
+        <li>Manager SignUp</li>
+        <li><input type="text" name="ManagerName" placeholder="Manager Name"></li>
         <li><input type="password" name="Password" placeholder="..."></li>
          <li><input type="button" id ="button" name="Submit" value="Submit"></li>
-         <li>Do not have a account?</li>
+         <li><a href="managerLoginPage.html" target="_blank">You already have a account?</a></li>
 
 
     </div>
+  </form>
+<?php
+
+$nameErr = $passwordErr = "";
+$name = $password  = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    if (empty($_POST["name"]))
+    {
+        $nameErr = "we should provide the name";
+    }
+    else
+    {
+        $name = test_input($_POST["name"]);
+        
+        if (!preg_match("/^[a-zA-Z ]*$/",$name))
+        {
+            $nameErr = "only allow the name and blank"; 
+        }
+    }
+    
+    if (empty($_POST["password"]))
+    {
+      $emailErr = "we should provide the password";
+    }
+    else
+    {
+        $email = test_input($_POST["email"]);
+        
+        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$password))
+        {
+            $emailErr = "the password is invalid"; 
+        }
+    }
+    
+    
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
+
 
   </body>
 
 </head>
   
 </html>
+
  <!--  https://www.youtube.com/watch?v=qFzalHnpYgM -->
