@@ -68,8 +68,13 @@
 	
 	mysqli_close($conn);
 ?>
-</body>
 
+
+<bottom>
+<input type="button" style="width:200px;height:50px" value="Add a drink" onclick="window.location='add_drinks.php'" />
+
+
+</body>
 </html>
 
 	
