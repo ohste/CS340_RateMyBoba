@@ -75,7 +75,7 @@ ul.list li:nth-child(5){
         <li><input type="text" name="Customer Name" placeholder="Customer Name"></li>
         <li><input type="password" name="Password" placeholder="..."></li>
         <li><input type="button" id ="button" name="Submit" value="Submit"></li>
-        <li><a href="customerSignUpPage.html" target="_blank">Don't have a account?</a></li>
+        <li><a href="customerSignUpPage.php" target="_blank">Don't have a account?</a></li>
 
 
     </div>
