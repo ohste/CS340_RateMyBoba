@@ -14,7 +14,7 @@
 // change the value of $dbuser and $dbpass to your username and password
 	include 'connectvars.php';
 	include 'header.php';
-
+echo"<div class=\"mainbody\">";
 // Connect to the database
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
@@ -63,10 +63,11 @@ $query = "SELECT * FROM `Customers` ";
 	// Close the database connection
 	mysqli_close($conn);
 ?>
-
+  
 	<form action="removeCustomer.php" >
 	<input type = "submit"  value = "Remove Customer" />
+
+</div>
 </body>
 
 </html>
-

@@ -1,7 +1,7 @@
 header {
 
 	height: 20px;
-	background-color: lightgray;
+	background-color: #AD62AA;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -26,6 +26,18 @@ header > ul {
 	font-size: 0.75em;
 	float: right;
 } */
+#home{
+	font-size: 26px;
+}
+a.shops:visited,
+a.shops:link{
+	text-decoration: none;
+	color: black;
+}
+a.shops:hover{
+	color: grey;
+	font-size: larger;
+}
 a#home:visited,
 a#home:link{
 	color: white;
@@ -33,7 +45,7 @@ a#home:link{
 }
 a#home:hover{
 	color:#c2c2d6;
-	font-size: 22px;
+	font-size: 28px;
 }
 #bardiv{
 	width: 20%;
@@ -41,8 +53,8 @@ a#home:hover{
 	text-align: right;
 }
 div#main{
-	width: 180px;
-	text-align: center;
+	width: 30%;
+	text-align: justify;
 	margin:2px 2px 2px 2px;
 	float:left;
 }
@@ -50,27 +62,28 @@ html {
 	background-color: light gray;
 	font-family: Helvetica;
 	font-size: 18px;
+	height: 100%;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #413c69;
 		margin: 0 0 0 0;
 		float:
 }
 
 nav li {
     float: left;
-    border-right:1px solid #bbb;
+    border-right:none;
 }
-
+/*
 nav li:nth-last-child(-n+4){
     border-right: none;
-    float: right;
+    float: left;
     border-left:1px solid #bbb;
-}
+} */
 
 nav li a {
     display: block;
@@ -84,7 +97,7 @@ nav li a:hover:not(.active) {
 }
 
 nav .active {
-    background-color: green;
+    background-color: #4A47A3;
 }
 main {
 	overflow:auto;
@@ -94,6 +107,15 @@ main {
 	border: solid grey 2px;
 	border-radius: 8px;
 	padding: 10px 10px 10px 10px;
+}
+body{
+	margin: 0;
+	height: 100%;
+}
+.mainbody{
+	padding: 8px;
+	background-color: #f4b0c6;
+	height: 100%;
 }
 #betSpan {
 	float: right;
@@ -313,6 +335,10 @@ caption {
   font-weight: bold;
   padding: 0.5em 0 0.5em 0;
   text-align: left;
+}
+#addButton{
+	width:200px;
+	height:50px;
 }
 .btn2 {
   -webkit-border-radius: 2;
