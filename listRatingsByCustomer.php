@@ -68,8 +68,11 @@
 	    } else{
 			echo "<p class='lead'><em>No records were found.</em></p>";
 	    }
+
 		// Close the database connection
 		mysqli_close($conn);
+		echo "<input id=\"addButton\" type=\"Button\" value=\"Go Back to All Customers\" onclick=\"window.location='listCustomers?user=".$user."'\">";
+
 	?>
 </div>
 	</body>

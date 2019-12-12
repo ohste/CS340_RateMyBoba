@@ -63,7 +63,8 @@ $query = "SELECT * FROM `Customers` ";
 	// Close the database connection
 	mysqli_close($conn);
 ?>
-</div>
+
 </body>
+</div>
 
 </html>
