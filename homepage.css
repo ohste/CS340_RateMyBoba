@@ -20,13 +20,18 @@
     cursor: pointer;
 }
 
-.homebutton:hover {opacity: 1}
+.homebutton:hover {
+  opacity: 1;
+
+}
 
 .bobaimg{
-    width: 20%;
+    height:60%;
     margin: 5px;
+    transition: 2s;
 }
 
 .bobaimg:hover {
-    width: 25%;
+    height:65%;
+    transition: 0.3s;
 }

@@ -22,7 +22,7 @@
 		}
 
 	// query to select all information from parts table
-		$query = "SELECT Shop.ShopID, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name
+		$query = "SELECT Shop.Name AS SName, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name
 			FROM `Rating`, `Customers`, `Drink`, `Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
@@ -55,7 +55,7 @@
 			mysqli_data_seek($result, 0);
 	        while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
-						echo "<td>" . $row['ShopID'] . "</td>";
+						echo "<td>" . $row['SName'] . "</td>";
 						echo "<td>" . $row['Flavor'] . "</td>";
 						echo "<td>" . $row['Comment'] . "</td>";
 						echo "<td>" . $row['NumStars'] . "</td>";

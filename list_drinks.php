@@ -24,10 +24,10 @@ echo"<div class=\"mainbody\">";
 
 // query to select all information from supplier table
 
-	$query = "SELECT * FROM Drink, Shop
+	$query = "SELECT Drink.DrinkID, Drink.Flavor, Drink.Temperature, Drink.Price, Drink.Rating FROM Drink, Shop
 		WHERE Drink.ShopID=Shop.ShopID
 		AND Shop.ShopID= $shop";
-	$query2 = "SELECT Manager.Name, Manager.Email FROM Manager, Shop
+	$query2 = "SELECT Manager.Name, Manager.Email, Shop.Address, Shop.Phone FROM Manager, Shop
 	WHERE Manager.managerID = Shop.managerID
 	AND Shop.ShopID = $shop";
 
@@ -84,6 +84,10 @@ echo"<div class=\"mainbody\">";
 echo "</div>";
 $row = mysqli_fetch_array($result2);
 echo "<div id=info2>";
+echo "Address: " . $row[Address];
+echo "<br>";
+echo "Phone: " . $row[Phone];
+echo "<br>";
 echo "Manager: " . $row[Name] ;
 echo "<br>";
 echo "Email: " . $row[Email];
