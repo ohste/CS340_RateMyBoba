@@ -30,7 +30,7 @@ $listshop = $_GET['listShops'];
     <div class="mainbody">
         <img class="bobaimg" src="boba.png" alt="Boba Fett">
         <input class="homebutton" type="button" style="width:200px;height:50px" value="See all shops" onclick="window.location='listShops.php'" />
-        <input class="homebutton" type="button" style="width:200px;height:50px" value="List customers" onclick="window.location='listCustomers.php'" />
+        <input class="homebutton" type="button" style="width:200px;height:50px" value="See all customers" onclick="window.location='listCustomers.php'" />
         <input class="homebutton" type="button" style="width:200px;height:50px" value="Sign up" onclick="window.location='addCustomer.php'" />
     </div>
 </body>
