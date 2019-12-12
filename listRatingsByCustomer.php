@@ -26,7 +26,7 @@
 			FROM `Rating`, `Customers`, `Drink`, `Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
-			AND Rating.ShopID = Shop.ShopID
+			AND Drink.ShopID = Shop.ShopID
 			AND Rating.CustomerID = $customer";
 
 	// Get results from query

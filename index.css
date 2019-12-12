@@ -328,10 +328,10 @@ table#t01 th {
   color: white;
 }
 
-#t01  tr:hover {
+/* #t01  tr:hover {
   background-color: orange;
   color: orange;
-}
+} */
 caption {
   font-weight: bold;
   padding: 0.5em 0 0.5em 0;
