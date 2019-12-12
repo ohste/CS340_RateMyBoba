@@ -70,7 +70,7 @@
 <input type="button" style="width:200px;height:50px" value="Add a shop" onclick="window.location='addShop.php'" />
 
 <bottom>
-<input type="button" style="width:200px;height:50px" value="List drinks" onclick="window.location='list_drinks.php'" />
+<!-- <input type="button" style="width:200px;height:50px" value="List drinks" onclick="window.location='list_drinks.php'" /> -->
 </div>
 </body>
 
