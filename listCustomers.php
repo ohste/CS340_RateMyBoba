@@ -70,5 +70,6 @@ $query = "SELECT * FROM `Customers` ";
 </form>
 </div>
 </body>
+</div>
 
 </html>

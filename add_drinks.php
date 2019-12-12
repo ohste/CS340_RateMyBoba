@@ -69,7 +69,7 @@ mysqli_close($conn);
       	<p>
 		<p>
 			<label for="Price">Drink Price:</label>
-			<input type="number" min=1 max = 99999 class="required" name="Price" id="Price" title="Price should have a decimal">
+			<input type="number" step = "0.01" min=1 max = 99999 class="required" name="Price" id="Price" title="Price should have a decimal">
 		</p>
 
 	</fieldset>

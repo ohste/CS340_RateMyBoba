@@ -14,7 +14,7 @@
 	// change the value of $dbuser and $dbpass to your username and password
 		include 'connectvars.php';
 		include 'header.php';
-
+		echo"<div class=\"mainbody\">";
 	// Connect to the database
 		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
@@ -26,7 +26,7 @@
 			FROM `Rating`, `Customers`, `Drink`, `Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
-			AND Rating.ShopID = Shop.ShopID
+			AND Drink.ShopID = Shop.ShopID
 			AND Rating.CustomerID = $customer";
 
 	// Get results from query
@@ -68,9 +68,13 @@
 	    } else{
 			echo "<p class='lead'><em>No records were found.</em></p>";
 	    }
+
 		// Close the database connection
 		mysqli_close($conn);
+		echo "<input id=\"addButton\" type=\"Button\" value=\"Go Back to All Customers\" onclick=\"window.location='listCustomers?user=".$user."'\">";
+
 	?>
+</div>
 	</body>
 
 	</html>
