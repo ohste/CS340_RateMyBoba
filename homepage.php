@@ -15,23 +15,23 @@ $listshop = $_GET['listShops'];
 <body>
 
     <?php
-    // change the value of $dbuser and $dbpass to your username and password
     include 'connectvars.php';
-    // include 'header.php';
 
     ?>
     <header>
-    <div>
-    <div id = "main"><a href="home.php" id = "home">RATE MY BOBA </a></div>
-    <div id="bardiv"><em>Welcome <span id="username"><?php echo $user;?></span>!</em>
-    </div>
+        <div>
+            <div id="main"><a href="homepage.php" id="home">RATE MY BOBA </a></div>
+            <!-- <div id="bardiv"><em></em></div> -->
 
     </header>
+
     <div class="mainbody">
-        <img class="bobaimg" src="boba.png" alt="Boba Fett">
-        <input class="homebutton" type="button" style="width:200px;height:50px" value="See all shops" onclick="window.location='listShops.php'" />
-        <input class="homebutton" type="button" style="width:200px;height:50px" value="See all customers" onclick="window.location='listCustomers.php'" />
-        <input class="homebutton" type="button" style="width:200px;height:50px" value="Sign up" onclick="window.location='addCustomer.php'" />
+
+        <img class="bobaimg" src="boba.png" alt="Bob">
+        <input class="homebutton" type="button" style="width:200px;height:50px;" value="FIND YOUR SHOP" onclick="window.location='listShops.php'" />
+        <input class="homebutton" type="button" style="width:200px;height:50px;" value="SEE ALL CUSTOMERS" onclick="window.location='listCustomers.php'" />
+        <input class="homebutton" type="button" style="width:200px;height:50px;" value="BECOME A CUSTOMER" onclick="window.location='addCustomer.php'" />
+
     </div>
 </body>
 

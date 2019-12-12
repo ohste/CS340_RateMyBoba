@@ -9,10 +9,10 @@
     background-color:#c17e2c;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 16px;
     text-align: center;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -26,6 +26,7 @@
 }
 
 .bobaimg{
+
     height:60%;
     margin: 5px;
     transition: 2s;
@@ -34,4 +35,8 @@
 .bobaimg:hover {
     height:65%;
     transition: 0.3s;
+}
+
+#home{
+    font-family: "Courier New", Courier, monospace;
 }

@@ -22,12 +22,13 @@ header > img {
 header > ul {
 	padding-left: 0pt;
 }
-/* header em {
-	font-size: 0.75em;
-	float: right;
-} */
+
 #home{
 	font-size: 26px;
+	font-family: "Courier New", Courier, monospace;
+	align-items: center;
+    justify-content: center;
+    flex-direction:column;
 }
 
 a.shops:visited,
@@ -46,12 +47,15 @@ a#home:link{
 }
 a#home:hover{
 	color:#c2c2d6;
-	font-size: 28px;
+	opacity: 0.6;
+    transition: 0.3s;
 }
 #bardiv{
 	width: 20%;
 	float: right;
 	text-align: right;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
 }
 div#main{
 	width: 30%;
@@ -79,12 +83,6 @@ nav li {
     float: left;
     border-right:none;
 }
-/*
-nav li:nth-last-child(-n+4){
-    border-right: none;
-    float: left;
-    border-left:1px solid #bbb;
-} */
 
 nav li a {
     display: block;
@@ -319,6 +317,9 @@ td {
 }
 table#t01 {
 	width:400px;
+	/* align-items: center;
+    justify-content: center;
+    flex-direction:column; */
 }
 
 table#t01 tr:nth-child(even) {
@@ -334,10 +335,7 @@ table#t01 th {
   color: white;
 }
 
-/* #t01  tr:hover {
-  background-color: orange;
-  color: orange;
-} */
+
 caption {
   font-weight: bold;
   padding: 0.5em 0 0.5em 0;
@@ -363,3 +361,13 @@ caption {
   background: orange;
   text-decoration: none;
 }
+
+.table{
+	text-align: center;
+}
+
+.center{
+	margin-left:auto; 
+    margin-right:auto;
+}
+
