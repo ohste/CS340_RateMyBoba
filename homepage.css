@@ -20,15 +20,21 @@
     cursor: pointer;
 }
 
-.homebutton:hover {opacity: 1}
+.homebutton:hover {
+  opacity: 1;
+
+}
 
 .bobaimg{
-    width: 10em;
-    margin-bottom: 5px;
+
+    height:60%;
+    margin: 5px;
+    transition: 2s;
 }
 
 .bobaimg:hover {
-    width: 12em;
+    height:65%;
+    transition: 0.3s;
 }
 
 #home{
