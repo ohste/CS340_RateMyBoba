@@ -8,6 +8,7 @@ $listshop = $_GET['listShops'];
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="homepage.css">
 </head>
 
 <body>
@@ -19,21 +20,9 @@ $listshop = $_GET['listShops'];
 
     ?>
     <div class="mainbody">
-        <form action="listShops.php">
-            <input type="submit" value="See all shops">
-        </form>
-
-        <form action="listCustomers.php">
-            <input type="submit" value="List customers">
-        </form>
-
-        <form action="addCustomer.php">
-            <input type="submit" value="Add a customer">
-        </form>
-
-        <form action="CustomerSignUpPage.php">
-            <input type="submit" value="Customer Sign Up">
-        </form>
+        <input type="button" style="width:200px;height:50px" value="See all shops" onclick="window.location='listShops.php'" />
+        <input type="button" style="width:200px;height:50px" value="List customers" onclick="window.location='listCustomers.php'" />
+        <input type="button" style="width:200px;height:50px" value="Sign up" onclick="window.location='addCustomer.php'" />
     </div>
 </body>
 
