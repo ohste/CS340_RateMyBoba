@@ -67,7 +67,7 @@ mysqli_close($conn);
 		<legend>Shop Info:</legend>
 		<p>
 			<label for="Name">Name</label>
-			<input type="text"  class="required"  title="shopID should be numeric">
+			<input type="text"  class="required"  name ="Name" title="shopID should be numeric">
 		</p>
 		<p>
 			<label for="Address">Address    </label>
@@ -75,7 +75,7 @@ mysqli_close($conn);
 		</p>
 		<p>
 			<label for="Phone">Phone    </label>
-			<input type="number" min=1 max = 99999 class="required" name="Phone" id="Phone" title="Phone should be numeric">
+			<input type="number" min=1 max = 99999999999 class="required" name="Phone" id="Phone" title="Phone should be numeric">
 		</p>
 		<p>
 			<label for="Hours">Hours    </label>

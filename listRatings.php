@@ -23,7 +23,7 @@
 		}
 
 	// query to select all information from parts table
-		$query = "SELECT Shop.ShopID, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name
+		$query = "SELECT Shop.Name, Drink.Flavor, Rating.Comment, Rating.NumStars, Customers.Name AS CustName
 			FROM `Rating`, `Customers`, `Drink`, `Shop`
 			WHERE Rating.CustomerID = Customers.CustomerID
 			AND Rating.DrinkID = Drink.DrinkID
@@ -39,13 +39,13 @@
 		// to display the results
 		$row = mysqli_fetch_array($result);
 		if(mysqli_num_rows($result) > 0){
-	        echo "<h1>" . $row['Name']. "</h1>";
+	     echo "<h2> Shop:" . $row['Name']. "</h1>";
+			 echo "<h2> Drink:" . $row['Flavor']. "</h1>";
 			echo "<table id='t01' border='1'>";
 			// Create the table header
 	        echo "<thead>";
 				echo "<tr>";
-				echo "<th>Shop</th>";
-				echo "<th>Drink</th>";
+				echo "<th>Customer</th>";
 				echo "<th>Comment</th>";
 				echo "<th>Rating(1-5)</th>";
 				echo "</tr>";
@@ -56,8 +56,7 @@
 			mysqli_data_seek($result, 0);
 	        while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
-						echo "<td>" . $row['ShopID'] . "</td>";
-						echo "<td>" . $row['Flavor'] . "</td>";
+						echo "<td>" . $row['CustName'] . "</td>";
 						echo "<td>" . $row['Comment'] . "</td>";
 						echo "<td>" . $row['NumStars'] . "</td>";
 						echo "</tr>";
@@ -71,6 +70,7 @@
 	    }
 		// Close the database connection
 		mysqli_close($conn);
+		echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."&drink=".$drink."'\">";
 	?>
 	</body>
 
