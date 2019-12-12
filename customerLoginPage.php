@@ -4,12 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Manager Login Page</title>
-  <!-- <link rel="stylesheet" href="managerLogin.css"> -->
+  <title>Customer Login Page</title>
+  <!-- <link rel="stylesheet" href="CustomerLogin.css"> -->
   <!-- <script type="text/javascript"></script>
  -->
  <style type="text/css">
-   *{
+  
+*{
   margin: 0;
   padding:0;
 }
@@ -66,14 +67,15 @@ ul.list li:nth-child(5){
 
 </head>
   <body>
+
  
     <div class="form-container" >
-      <ul class="list" action ="Drink.php" method="Post">
-        <li>Manager Login</li>
-        <li><input type="text" name="Manager Name" placeholder="Manager Name"></li>
+      <ul class="list" action ="addDrink.php" method="Post">
+        <li>Customer Login</li>
+        <li><input type="text" name="Customer Name" placeholder="Customer Name"></li>
         <li><input type="password" name="Password" placeholder="..."></li>
         <li><input type="button" id ="button" name="Submit" value="Submit"></li>
-        <li><a href="managerSignUpPage.html" target="_blank">Don't have a account?</a></li>
+        <li><a href="customerSignUpPage.php" target="_blank">Don't have a account?</a></li>
 
 
     </div>

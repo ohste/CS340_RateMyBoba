@@ -72,7 +72,7 @@ ul.list li:nth-child(5){
         <li><input type="text" name="ManagerName" placeholder="Manager Name"></li>
         <li><input type="password" name="Password" placeholder="..."></li>
          <li><input type="button" id ="button" name="Submit" value="Submit"></li>
-         <li><a href="managerLoginPage.html" target="_blank">You already have a account?</a></li>
+         <li><a href="managerLoginPage.php" target="_blank">You already have a account?</a></li>
 
 
     </div>

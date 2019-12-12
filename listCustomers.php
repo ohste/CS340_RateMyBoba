@@ -5,7 +5,7 @@
 ?>
 <html>
 	<head>
-		<title>List Parts</title>
+		<title>List Customers</title>
 		<link rel="stylesheet" href="index.css">
 	</head>
 <body>
@@ -63,7 +63,12 @@ $query = "SELECT * FROM `Customers` ";
 	// Close the database connection
 	mysqli_close($conn);
 ?>
-
+  
+	<form action="removeCustomer.php" >
+	<input type = "submit"  value = "Remove Customer" />
+	
+</form>
+</div>
 </body>
 </div>
 
