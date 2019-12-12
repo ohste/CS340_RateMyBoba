@@ -14,7 +14,7 @@
 	// change the value of $dbuser and $dbpass to your username and password
 		include 'connectvars.php';
 		include 'header.php';
-
+		echo"<div class=\"mainbody\">";
 	// Connect to the database
 		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
@@ -71,6 +71,7 @@
 		// Close the database connection
 		mysqli_close($conn);
 	?>
+</div>
 	</body>
 
 	</html>

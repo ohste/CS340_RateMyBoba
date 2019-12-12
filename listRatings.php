@@ -18,6 +18,7 @@
 		include 'header.php';
 		echo"<div class=\"mainbody\">";
 	// Connect to the database
+
 		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
 			die('Could not connect: ' . mysql_error());
@@ -72,6 +73,8 @@
 		// Close the database connection
 		mysqli_close($conn);
 		echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."&drink=".$drink."'\">";
+		echo "<input id=\"addButton\" type=\"Button\" value=\"Go Back to All Drinks\" onclick=\"window.location='list_drinks?user=".$user."&shop=".$shop."'\">";
+
 	?>
 </div>
 	</body>

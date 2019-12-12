@@ -34,8 +34,6 @@ echo"<div class=\"mainbody\">";
 		die("Query to show fields from table failed");
 	}
 
-
-
 	if(mysqli_num_rows($result) > 0){
         echo "<h1>Drinks</h1>";
 		echo "<table id='t01' border='1'>";
@@ -77,6 +75,8 @@ echo"<div class=\"mainbody\">";
 
 echo "<bottom>";
 echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Drink\" onclick=\"window.location='add_drinks?user=".$user."&shop=".$shop."'\">";
+echo "<input id=\"addButton\" type=\"Button\" value=\"Go Back to All Shops\" onclick=\"window.location='listShops?user=".$user."'\">";
+
 // echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."'\">";
 // echo "Add a drink";
 echo "</input>";
