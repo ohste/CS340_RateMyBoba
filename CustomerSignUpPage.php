@@ -1,68 +1,19 @@
-
 <!DOCTYPE html>
+
+<?php 
+    $currentpage="Customer Signup"
+
+?>
+
 <html>
 <head>
   <title>Customer Sign Up Page</title>
-  <!-- <link rel="stylesheet" href="managerLogin.css"> -->
-  <!-- <script type="text/javascript"></script>
- -->
- <style type="text/css">
-   *{
-  margin: 0;
-  padding:0;
-}
-body{
-  background-color:none;
-  padding-top: 25vh;
-}
-.form-container{
-  width: 300px;
-  height: auto;
-  padding: 30px 40px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #000;
-  margin: auto;
-}
-ul.list{
-  list-style-type: none;
-  text-align: center;
-
-}
-ul.list li{
-  width: 300px;
-  margin-bottom: 15px
-
-}
-ul.list li input{
-  width: 300px;
-  text-align: center;
-  padding: 16px 0px;
-  border: none;
-  background-color: #d3d3d3;
-}
-ul.list li input[type="button"]{
-  background-color: #4690fb;
-  color: #bbb;
-}
-
-ul.list li:nth-child(5){
-  color: red;
-}
-
-#button:hover{
-    box-shadow: inset 0 -4px 0 0 rgba(0,0,0,0.6), 0 0 8px 0 rgba(0,0,0,0.5);
-}
-
-#button:focus{
-    position: relative;
-    top: 2px;
-    box-shadow: inset 0 3px 5px 0 rgba(0,0,0, 0.2);
-    outline: 0;
-
- </style>
-
+  <link rel="stylesheet" href="login.css">
+  <script>
+        
+  </script>
 </head>
+
   <body>
     <form action ="addRating.php" method="get">
  
@@ -77,7 +28,16 @@ ul.list li:nth-child(5){
 
     </div>
   </form>
+  
 <?php
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 $nameErr = $passwordErr = "";
 $name = $password  = "";
@@ -111,23 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $emailErr = "the password is invalid"; 
         }
     }
-    
-    
 }
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 ?>
-
-
-
-  </body>
-
+</body>
 </head>
-  
 </html>
