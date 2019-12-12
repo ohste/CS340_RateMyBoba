@@ -66,6 +66,7 @@ $query = "SELECT * FROM `Customers` ";
   
 	<form action="removeCustomer.php" >
 	<input type = "submit"  value = "Remove Customer" />
+	
 </form>
 </div>
 </body>
