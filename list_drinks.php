@@ -55,11 +55,13 @@ echo"<div class=\"mainbody\">";
 
 
 		    echo "<tr>";
-            echo "<td>" . $row['DrinkID'] . "</td>";
-			echo "<td>" . $row['Flavor'] . "</td>";
-            echo "<td>" . $row['Temperature'] . "</td>";
-			echo "<td>" . $row['Price'] . "</td>";
-            echo "</tr>";
+				echo "</tr>";
+				echo "<td><a class='drinks' href = 'listRatings?user=".$user."&shop=".$shop
+				."&drink=".$row['DrinkID']."' >".$row['DrinkID'] . "</td>";
+				echo "<td>" . $row['Flavor'] . "</td>";
+        echo "<td>" . $row['Temperature'] . "</td>";
+				echo "<td>" . $row['Price'] . "</td>";
+        echo "</tr>";
         }
         echo "</tbody>";
         echo "</table>";
@@ -75,6 +77,7 @@ echo"<div class=\"mainbody\">";
 
 echo "<bottom>";
 echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Drink\" onclick=\"window.location='add_drinks?user=".$user."&shop=".$shop."'\">";
+echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."'\">";
 // echo "Add a drink";
 echo "</input>";
 echo "</bottom>";

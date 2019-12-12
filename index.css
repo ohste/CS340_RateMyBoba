@@ -246,6 +246,7 @@ fieldset label {
     float: left;
     clear: left;
     padding-top: 2px;
+		padding-right: 5px;
     width: 120px;
     text-align: right;
     font-size: 90%;
