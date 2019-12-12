@@ -3,6 +3,7 @@
 		$currentpage="List Ratings";
     $customer = $_GET['cust'];
 		$drink = $_GET['drink'];
+		$shop = $_GET['shop'];
 ?>
 <html>
 	<head>
