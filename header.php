@@ -18,7 +18,7 @@
 ?>
 <header>
 	<div>
-    <div id = "main"><a href="home.php" id = "home">RATE MY BOBA </a></div>
+    <div id = "main"><a href="homepage.php" id = "home">RATE MY BOBA </a></div>
     <div id="bardiv"><em>Welcome <span id="username"><?php echo $user;?></span>!</em>
     </div>
   </div>
