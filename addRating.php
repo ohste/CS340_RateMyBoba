@@ -75,7 +75,7 @@ mysqli_close($conn);
 		</p>
 		<p>
 			<label for="NumStars">NumStars:</label>
-			<input type="number" min=0 max=9999 class="required" name="NumStars" id="NumStars">
+			<input type="number" step = "0.1" min=1 max=5 class="required" name="NumStars" id="NumStars">
 		</p>
 	</fieldset>
 
