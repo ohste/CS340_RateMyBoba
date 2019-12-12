@@ -77,7 +77,7 @@ echo"<div class=\"mainbody\">";
 
 echo "<bottom>";
 echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Drink\" onclick=\"window.location='add_drinks?user=".$user."&shop=".$shop."'\">";
-echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."'\">";
+// echo "<input id=\"addButton\" type=\"Button\" value=\"Add a Rating\" onclick=\"window.location='addRating?user=".$user."&shop=".$shop."'\">";
 // echo "Add a drink";
 echo "</input>";
 echo "</bottom>";
